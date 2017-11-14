@@ -21,10 +21,12 @@
     <Content Include="Models\ErrorViewModel.cs" />
     <Content Include="Models\User.cs" />
     <Content Include="Models\Event.cs" />
+    <Content Include="Models\Entry.cs" />
     <Content Include="Models\dataContext.cs" />
     <Content Include="Data\diaryContext.cs" />
     <Content Include="Data\DbInitializer.cs" />
-    <Content Include="Models\Entry.cs" />
-    <Content Include="Controllers\UsersController.cs" />
+    <Content Include="Controllers\AccountController.cs" />
+    <Content Include="Helper\PasswordHashing.cs" />
+    <Content Include="Models\AccountViewModels\LoginRegisterModel.cs" />
   </ItemGroup>
 </Project>

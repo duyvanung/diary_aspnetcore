@@ -43,7 +43,7 @@
     <meta charset="utf-8">
 
     <!-- default css files -->
-    <link rel="stylesheet" href="/css/bootstrap.css" type="text/css" media="all">
+    <!--link rel="stylesheet" href="/css/bootstrap.css" type="text/css" media="all"-->
     <link rel="stylesheet" href="/css/style2.css" type="text/css" media="all">
     <link rel="stylesheet" href="/css/font-awesome.min.css" />
     <!-- default css files -->
@@ -71,11 +71,9 @@
     <div class="banner">
         <div class="header-top">
             <div class="container">
-             
-                <div class="header-top-right">          
-                       <p><a asp-area="" asp-controller="SignInSignUp" asp-action="Index"><i class="fa fa-user" aria-hidden="true"></i> Log in</a></p>
-                       <p><a asp-area="" asp-controller="SignInSignUp" asp-action="Index"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Sign up</a></p> 
-                        <p><a asp-area="" asp-controller="SignInSignUp" asp-action="Index"><i class="fa fa-sign-out" aria-hidden="true"></i> Log out</a></p>
+
+                <div class="header-top-right">
+                       @await Html.PartialAsync("_LoginPartial")
                 </div class="clearfix">
             </div>
         </div>
@@ -92,20 +90,20 @@
                         </button>
                         <div class="navbar-brand logo ">
                             <h1 class="animated wow pulse" data-wow-delay=".5s">
-                                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">My Diary</a>                                
+                                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">My Diary</a>
                             </h1>
                         </div>
 
                     </div>
                     <!-- Collect the nav links, forms, and other content for toggling -->
                     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                        <ul class="nav navbar-nav link-effect-4">                       
+                        <ul class="nav navbar-nav link-effect-4">
                             <li><a asp-area="" asp-controller="Home" asp-action="Index">Home</a></li>
                             <environment include="Development">
                                 <li><a asp-area="" asp-controller="Users" asp-action="Index">Users</a></li>
                             </environment>
                             <li><a asp-area="" asp-controller="Home" asp-action="About">About</a></li>
-                            <li><a asp-area="" asp-controller="Home" asp-action="Contact">Contact</a></li>                     
+                            <li><a asp-area="" asp-controller="Home" asp-action="Contact">Contact</a></li>
                         </ul>
                     </div><!-- /navbar-collapse -->
                 </div>
